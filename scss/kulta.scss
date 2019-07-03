@@ -474,6 +474,10 @@ footer {
   }
 }
 
+.poster p, .poster ul {
+	grid-column: 2;
+}
+
 .over-flex {
   grid-area: postcard;
   align-self: end;

@@ -1,23 +1,10 @@
 <?php get_header(); ?>
 
 <!-- Start the main container -->
-<main class="container" role="document">
+<main class="container" role="document"> <!-- needs fix. two main in the first few lines nested -->
 
-<?php if (have_posts()) : ?>
-	<?php while (have_posts()) : the_post();
-
-	  /*
-	   * Pull in a different sub-template, depending on the Post Format.
-	   *
-	   * Make sure that there is a default '<tt>format.php</tt>' file to fall back to
-	   * as a default. Name templates '<tt>format-link.php</tt>', '<tt>format-aside.php</tt>', etc.
-	   *
-	   * You should use this in the loop.
-	   */
-
-	  $format = get_post_format();
-	  get_template_part( 'format', $format );
-	  ?>
+<?php if (have_posts()) :
+	while (have_posts()) : the_post(); ?>
 
 		<main class="grid-container gp2-top gp3-bottom">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -47,16 +34,16 @@
 					<div class="small-12 medium-6 cell gm-tb">
 						<div class="service-grid shadow">
 							<img data-src="<?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-640x213.jpg"
-								 data-srcset="<?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840.jpg 3840w,
-											  <?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-1920x640.jpg 1920w,
-											  <?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-1024x341.jpg 1024w,
-											  <?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-768x256.jpg 768w,
-											  <?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-640x213.jpg 640w,
-											  <?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-360x120.jpg 360w"
-								 sizes="(min-width:640px) 50vw,
+								data-srcset="<?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840.jpg 3840w,
+									<?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-1920x640.jpg 1920w,
+									<?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-1024x341.jpg 1024w,
+									<?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-768x256.jpg 768w,
+									<?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-640x213.jpg 640w,
+									<?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-360x120.jpg 360w"
+								sizes="(min-width:640px) 50vw,
 										100vw"
-								 class="lozad-set"
-								 alt="Priest Sheet Metal"
+								class="lozad-set"
+								alt="Priest Sheet Metal"
 							/>
 							<noscript><img src="<?php echo content_url(); ?>/uploads/2017/11/plasma-cutter-3840-640x213.jpg" alt="Priest Sheet Metal"></noscript>
 							<h4 class="service-grid-bg text-center no-margin-bottom gp-4"><a href="<?php echo home_url(); ?>/cnc-profile-cutting" class="inline-block-100w">CNC Profile Cutting</a></h4>
@@ -202,20 +189,20 @@
 				</div><!-- grid-x -->
 			</article>
 		</main> <!-- .grid-container -->
-	<?php endwhile; ?><!-- while have posts -->
+	<?php endwhile; // while have posts -->
 
-	<?php else : ?>
-	  <div class="grid-container">
-		<div class="grid-x grid-padding-x">
-			<div class="cell">
-			  <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				  <p>Hmmm, seems like what you were looking for isn't here.  You might want to give it another try - the server might have hiccuped - or maybe you even spelled something wrong (though it's more likely <strong>I</strong> did).</p>
-				  <p>How about head back to the <a href="/" title="home">home page</a> and start again</p>
-			  </div><!--.entry-->
+	else : ?>
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+				<div class="cell">
+					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<p>Hmmm, seems like what you were looking for isn't here.  You might want to give it another try - the server might have hiccuped - or maybe you even spelled something wrong (though it's more likely <strong>I</strong> did).</p>
+						<p>How about head back to the <a href="/" title="home">home page</a> and start again</p>
+					</div><!--.entry-->
+				</div>
 			</div>
 		</div>
-	  </div>
 
-	<?php endif; ?><!-- if have posts -->
+	<?php endif; ?> <!-- if have posts -->
 </main> <!--.container -->
 <?php get_footer(); ?>
