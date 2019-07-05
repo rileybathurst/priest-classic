@@ -19,56 +19,56 @@
 				<!-- no script Cross fading images aka slider aka carousel http://css3.bradshawenterprises.com/cfimg/ -->
 				<div class="cfimg shadow">
 					<picture>
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-3600.webp" type="image/webp" media="(min-width: 1920px)" alt="priestsheetmetal fabrication">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-3600.jpg" media="(min-width: 1920px)" alt="priestsheetmetal fabrication">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-1920.webp" type="image/webp" media="(min-width: 1024px)" alt="priestsheetmetal fabrication">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-1920.jpg" media="(min-width: 1024px)" alt="priestsheetmetal fabrication">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)" alt="priestsheetmetal fabrication">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)" alt="priestsheetmetal fabrication">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)" alt="priestsheetmetal fabrication">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)" alt="priestsheetmetal fabrication">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)" alt="priestsheetmetal fabrication">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)" alt="priestsheetmetal fabrication">
+						<!-- <source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-3600.webp" type="image/webp" media="(min-width: 1920px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-3600.jpg" media="(min-width: 1920px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-1920.webp" type="image/webp" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-1920.jpg" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)"> -->
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)">
 						<img src="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-fabfiraction-sheetmetal-christchurch_new_zealand-360.jpg" alt="priestsheetmetal fabrication">
 					</picture>
 
 					<picture>
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-1920.webp" type="image/webp" media="(min-width: 1024px)" alt="priestsheetmetal industrial">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-1920.jpg" media="(min-width: 1024px)" alt="priestsheetmetal industrial">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)" alt="priestsheetmetal industrial">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)" alt="priestsheetmetal industrial">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)" alt="priestsheetmetal industrial">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)" alt="priestsheetmetal industrial">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)" alt="priestsheetmetal industrial">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)" alt="priestsheetmetal industrial">
+						<!-- <source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-1920.webp" type="image/webp" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-1920.jpg" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)"> -->
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)">
 						<img src="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-industrial-sheetmetal-christchurch_new_zealand-360.jpg" alt="priestsheetmetal industrial">
 					</picture>
 
 					<picture>
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-2460.webp" type="image/webp" media="(min-width: 1920px)" alt="priestsheetmetal sheetmetal">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-2460.jpg" media="(min-width: 1920px)" alt="priestsheetmetal sheetmetal">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-1920.webp" type="image/webp" media="(min-width: 1024px)" alt="priestsheetmetal sheetmetal">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-1920.jpg" media="(min-width: 1024px)" alt="priestsheetmetal sheetmetal">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)" alt="priestsheetmetal sheetmetal">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)" alt="priestsheetmetal sheetmetal">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)" alt="priestsheetmetal sheetmetal">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)" alt="priestsheetmetal sheetmetal">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)" alt="priestsheetmetal sheetmetal">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)" alt="priestsheetmetal sheetmetal">
+						<!-- <source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-2460.webp" type="image/webp" media="(min-width: 1920px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-2460.jpg" media="(min-width: 1920px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-1920.webp" type="image/webp" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-1920.jpg" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)"> -->
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)">
 						<img src="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-sheetmetal-christchurch_new_zealand-360.jpg" alt="priestsheetmetal sheetmetal">
 					</picture>
 
 					<picture>
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-3840.webp" type="image/webp" media="(min-width: 1920px)" alt="priestsheetmetal welding">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-3840.jpg" media="(min-width: 1920px)" alt="priestsheetmetal welding">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-1920.webp" type="image/webp" media="(min-width: 1024px)" alt="priestsheetmetal welding">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-1920.jpg" media="(min-width: 1024px)" alt="priestsheetmetal welding">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)" alt="priestsheetmetal welding">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)" alt="priestsheetmetal welding">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)" alt="priestsheetmetal welding">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)" alt="priestsheetmetal welding">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)" alt="priestsheetmetal welding">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)" alt="priestsheetmetal welding">
+						<!-- <source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-3840.webp" type="image/webp" media="(min-width: 1920px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-3840.jpg" media="(min-width: 1920px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-1920.webp" type="image/webp" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-1920.jpg" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)"> -->
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)">
 						<img src="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-welding-sheetmetal-christchurch_new_zealand-360.jpg" alt="priestsheetmetal welding">
 					</picture>
 
@@ -87,46 +87,46 @@
 
 				<div class="small-12 medium-6 cell cfimg shadow">
 					<picture>
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-1337.webp" type="image/webp" media="(min-width: 1024px)" alt="priestsheetmetal architechtural">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-1337.jpg" media="(min-width: 1024px)" alt="priestsheetmetal architechtural">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)" alt="priestsheetmetal architechtural">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)" alt="priestsheetmetal architechtural">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)" alt="priestsheetmetal architechtural">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)" alt="priestsheetmetal architechtural">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)" alt="priestsheetmetal architechtural">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)" alt="priestsheetmetal architechtural">
+						<!-- <source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-1337.webp" type="image/webp" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-1337.jpg" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)"> -->
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)">
 						<img src="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-architechtural-sheetmetal-christchurch_new_zealand-360.jpg" alt="priestsheetmetal architechtural">
 					</picture>
 
 					<picture>
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-1632.webp" type="image/webp" media="(min-width: 1024px)" alt="priestsheetmetal brass">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-1632.jpg" media="(min-width: 1024px)" alt="priestsheetmetal brass">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)" alt="priestsheetmetal brass">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)" alt="priestsheetmetal brass">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)" alt="priestsheetmetal brass">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)" alt="priestsheetmetal brass">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)" alt="priestsheetmetal brass">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)" alt="priestsheetmetal brass">
+						<!-- <source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-1632.webp" type="image/webp" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-1632.jpg" media="(min-width: 1024px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)"> -->
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)">
 						<img src="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-brass-sheetmetal-christchurch_new_zealand-360.jpg" alt="priestsheetmetal brass">
 					</picture>
 
 					<picture>
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)" alt="priestsheetmetal cad">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)" alt="priestsheetmetal cad">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)" alt="priestsheetmetal cad">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)" alt="priestsheetmetal cad">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)" alt="priestsheetmetal cad">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)" alt="priestsheetmetal cad">
+						<!-- <source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)"> -->
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)">
 						<img src="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-cad-sheetmetal-christchurch_new_zealand-1024.jpg" alt="priestsheetmetal cad">
 					</picture>
 
 					<picture>
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)" alt="priestsheetmetal steel">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)" alt="priestsheetmetal steel">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)" alt="priestsheetmetal steel">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)" alt="priestsheetmetal steel">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)" alt="priestsheetmetal steel">
-						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)" alt="priestsheetmetal steel">
+						<!-- <source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-1024.webp" type="image/webp" media="(min-width: 768px)">
+						<source srcset="php echo content_url(); /uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-1024.jpg" media="(min-width: 768px)"> -->
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-768.webp" type="image/webp" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-768.jpg" media="(min-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-360.webp" type="image/webp" media="(max-width: 360px)">
+						<source srcset="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-360.jpg" media="(max-width: 360px)">
 						<img src="<?php echo content_url(); ?>/uploads/2019/05/priest_sheetmetal-custom-sheetmetal-christchurch_new_zealand-1024.jpg" alt="priestsheetmetal steel">
 					</picture>
 
