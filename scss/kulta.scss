@@ -672,7 +672,7 @@ img .alignleft {
 }
 
 .gallery-caption {
-  color: #757575;
+  color: $medium-gray;
   display: block;
   font-size: 13px;
   font-size: 0.8125rem;
@@ -686,4 +686,49 @@ img .alignleft {
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
   display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.poster {
+	grid-auto-rows: min-content; // pulls everything close
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.posting {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: min-content; // pulls everything close
+}
+
+.posting p,
+.posting .wp-block-gallery {
+	// width: 50%;
 }

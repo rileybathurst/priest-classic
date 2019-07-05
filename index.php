@@ -9,10 +9,15 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="grid-container">
 
-					<!-- controlled completley by grid for strange order process -->
-					<div class="poster">
+
+					<div class="poster gm-tb">
 						<div class="poster-thumbnail"><?php the_post_thumbnail(); ?></div>
 						<h4 class="over-flex-bg over-flex no-margin-bottom text-center gp-4"><?php the_title(); ?></h4>
+					</div>
+
+					<!-- controlled completley by grid for strange order process -->
+					<div class="poster">
+
 						<!-- needs a custom html set of tags for div class="poster-text" around the text areas to have them sit where the text goes -->
 
 						<?php the_content(); ?>
@@ -61,5 +66,16 @@
 </main>
 
 </div> <!-- .keep -->
+
+<script>
+	var newElem = document.createElement('div')
+
+
+	Array.prototype.forEach.call(document.querySelectorAll('p.poster-p'), function(c){
+	  newElem.appendChild(c);
+	});
+	newElem.classList.add('grab');
+	document.body.appendChild(newElem);
+</script>
 
 <?php get_footer(); ?>
