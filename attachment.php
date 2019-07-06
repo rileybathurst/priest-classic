@@ -3,61 +3,82 @@
 <!-- Start the main container -->
 <main class="container" role="document">
 
-	<?php if (have_posts()) :
-		while (have_posts()) : the_post(); ?>
+	<!-- can remove the if has posts as its specifc and will fall back to 404.php -->
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<div class="grid-container">
-
-					<!-- controlled completley by grid for strange order process -->
-					<div class="poster">
-						<div class="poster-thumbnail"><?php the_post_thumbnail(); ?></div>
-						<h4 class="over-flex-bg over-flex no-margin-bottom text-center gp-4"><?php the_title(); ?></h4>
-						<!-- needs a custom html set of tags for div class="poster-text" around the text areas to have them sit where the text goes -->
-
-						<?php the_content(); ?>
-
-					</div> <!-- .poster -->
-				</div> <!-- .grid-container -->
-			</article> <!-- #post -->
-
-		<?php endwhile; // while have posts
-
-	else : ?>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="grid-container">
-			<div class="grid-x grid-padding-x gm-tb">
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h4>404</h4>
-					<p>Hmmm, seems like what you were looking for isn't here.  You might want to give it another try - the server might have hiccuped - or maybe you even spelled something wrong (though it's more likely <strong>I</strong> did).</p>
-					<p>How about head back to the <a href="/" title="home">home page</a> and start again</p>
-				 </div><!--.entry-->
-			</div> <!-- .grid-x -->
+
+			<!-- controlled completley by grid for strange order process -->
+			<div class="poster">
+				<div class="poster-thumbnail"><?php the_post_thumbnail(); ?></div>
+				<h4 class="over-flex-bg over-flex no-margin-bottom text-center gp-4">
+					<?php if ( has_excerpt() ) { ?>
+
+						<div class="entry-caption">
+							<?php the_excerpt(); ?>
+						</div><!-- .entry-caption -->
+					<?php } ?>
+				</h4>
+			</div> <!-- .poster -->
+
+			<div class="img-100 entry-attachment">
+				<?php $image_size = apply_filters( 'wporg_attachment_size', 'large' );
+					echo wp_get_attachment_image( get_the_ID(), $image_size ); ?>
+			</div><!-- .entry-attachment -->
+
 		</div> <!-- .grid-container -->
-	<?php endif; // if have posts
+	</article> <!-- #post -->
 
-	if (is_single()) { ?>
-		<!-- single pagination -->
-		<div class="grid-container">
-			<div class="grid-x grid-padding-x">
-				<ul class="no-bullet">
+	<!-- queries where the excerpt has been used to show the page it comes from when on the gallery -->
+<?php $the_query = new WP_Query( array (
+		's' => get_the_excerpt()
+	) );
+	if ( $the_query->have_posts() ) {
+		while ( $the_query->have_posts() ) {
+			$the_query->the_post();
 
-					<p class="small-6 cell">Check out some other posts</p>
-					<li class="small-3 cell"><p class=""><?php previous_post_link( '%link', '%title', TRUE ); ?></p></li>
-					<li class="small-3 cell"><p class="text-right"> <?php next_post_link( '%link', '%title', TRUE ); ?> </p></li>
+			$remove = array(
+				"&#8208;", // hypen
+				"&#8209;", // non-breaking hypen
+				"&#8210;", // figure dash
+				"&#8211;", // en dash
+				"&#8212;", // em dash
+				"&#8213;", // horizontal bar
+				"christchurch",
+				"Christchurch",
+				"CHRISTCHURCH"
+			);
+			$short_title = str_replace ( $remove, "", get_the_title()); ?>
 
-				</ul>
-			</div> <!-- .grid-x -->
-		</div> <!-- .grid-container -->
-	<?php }
+			<div class="grid-container">
+				<div class="grid-x grid-padding-x gm-tb text-center">
+					<div class="cell gp-tb-large">
+						<h4>Find More products in</h4>
+					</div>
+				</div>
 
-	// pagination
-	if ( $wp_query->max_num_pages > 1 ) : ?>
-		<div class="grid-x">
-			<h4 class="small-12 large-4 cell drop fall">Look deeper into the site</h4>
-			<h4 class="small-12 large-4 cell drop fall"><?php next_posts_link ( '<span class="meta-nav">&larr;</span> Older posts' ) ; ?></h4>
-			<h4 class="small-12 large-4 cell drop fall"><?php previous_posts_link ( '<span class="meta-nav">&rarr;</span> Newer posts' ) ; ?></h4>
-		</div>
-	<?php endif; ?>
+				<div class="grid-x grid-padding-x gm-tb">
+					<div class="small-12 large-6 cell gp-tb-large">
+						<div class="service-grid shadow img-100">
+							<?php the_post_thumbnail('medium_large'); ?> <!-- 768 accross -->
+						</div>
+					</div>
+					<div class="small-12 large-6 cell gp-tb-large">
+						<div class="bg-light-gray shadow">
+							<h4 class="service-grid-bg no-margin-bottom gp-4"><a href="<?php the_permalink(); ?>" class="inline-block-100w"><?php echo $short_title; ?></a></h4>
+							<div class="gp-4 no-margin-bottom">
+								<?php the_excerpt(); ?>
+							</div>
+							<a href="<?php the_permalink(); ?>" class="gm-4 button hollow">More about <?php echo $short_title; ?></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		<?php }
+	}
+	wp_reset_query(); // Restore global post data ?>
+
 </main>
 
 </div> <!-- .keep -->

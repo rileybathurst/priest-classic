@@ -455,13 +455,15 @@ footer {
   "textual"
   "gallery";
   grid-gap: $global-margin;
+	grid-template-columns: 1fr;
 
   @include breakpoint(medium) {
 	grid-template-areas:
-	  "postcard postcard"
-	  "gallery  textual"
-	  ".        textual" // incase the text is longer than the images to stop things getting distored
-	  ;
+	"postcard postcard"
+	"gallery  textual"
+	".        textual" // incase the text is longer than the images to stop things getting distored
+	;
+
 	grid-template-columns: 1fr 1fr;
   }
 }
@@ -474,8 +476,11 @@ footer {
   }
 }
 
-.poster p, .poster ul {
-	grid-column: 2;
+.poster p, .poster ul { // causing issues as the wp-block-gallery is also a ul
+grid-column: 1;
+	@include breakpoint(medium) {
+		grid-column: 2;
+	}
 }
 
 .over-flex {
@@ -490,7 +495,7 @@ footer {
 }
 
 .poster .wp-block-gallery {
-  grid-area: gallery;
+  // grid-area: gallery;
   margin-left: 0;
 }
 
@@ -706,29 +711,26 @@ img .alignleft {
 
 
 
-.poster {
-	grid-auto-rows: min-content; // pulls everything close
+
+
+
+
+.grab {
+	grid-column: 1;
+	grid-row: 1;
+
+	@include breakpoint(medium) {
+	grid-column: 2;
+	grid-row: 1;
+	}
 }
 
+.wp-block-gallery {
+	grid-column: 1;
+	grid-row: 2;
 
-
-
-
-
-
-
-
-
-
-
-
-.posting {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-auto-rows: min-content; // pulls everything close
-}
-
-.posting p,
-.posting .wp-block-gallery {
-	// width: 50%;
+	@include breakpoint(medium) {
+		grid-column: 1 !important; // trying to keep this inline but also control the ul for other lists
+		grid-row: 1;
+	}
 }

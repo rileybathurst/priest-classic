@@ -10,14 +10,13 @@
 				<div class="grid-container">
 
 
-					<div class="poster gm-tb">
+					<div class="poster gm-tb"> <!-- I should fix up the double poster class as its not quite right -->
 						<div class="poster-thumbnail"><?php the_post_thumbnail(); ?></div>
 						<h4 class="over-flex-bg over-flex no-margin-bottom text-center gp-4"><?php the_title(); ?></h4>
 					</div>
 
 					<!-- controlled completley by grid for strange order process -->
-					<div class="poster">
-
+					<div id="poster" class="poster"> <!-- I should fix up the double poster class as its not quite right -->
 						<!-- needs a custom html set of tags for div class="poster-text" around the text areas to have them sit where the text goes -->
 
 						<?php the_content(); ?>
@@ -57,25 +56,32 @@
 
 	// pagination
 	if ( $wp_query->max_num_pages > 1 ) : ?>
+	<div class="grid-container">
 		<div class="grid-x">
 			<h4 class="small-12 large-4 cell drop fall">Look deeper into the site</h4>
 			<h4 class="small-12 large-4 cell drop fall"><?php next_posts_link ( '<span class="meta-nav">&larr;</span> Older posts' ) ; ?></h4>
 			<h4 class="small-12 large-4 cell drop fall"><?php previous_posts_link ( '<span class="meta-nav">&rarr;</span> Newer posts' ) ; ?></h4>
 		</div>
+	</div>
 	<?php endif; ?>
 </main>
 
 </div> <!-- .keep -->
 
 <script>
-	var newElem = document.createElement('div')
+// way of holding together all the P tags on a page so they dont get broken in the grid
+var newElem = document.createElement('div')
+
+Array.prototype.forEach.call(
+	document.querySelectorAll('div.poster > p, p.poster-text'),
+	function(c){
+		newElem.appendChild(c);
+});
+newElem.classList.add('grab');
+document.getElementById('poster').appendChild(newElem);
 
 
-	Array.prototype.forEach.call(document.querySelectorAll('p.poster-p'), function(c){
-	  newElem.appendChild(c);
-	});
-	newElem.classList.add('grab');
-	document.body.appendChild(newElem);
+
 </script>
 
 <?php get_footer(); ?>

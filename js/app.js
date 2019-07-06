@@ -23,6 +23,9 @@ $(document).foundation();
 	}
   })
 
-  observer.observe()
-  pictureObserver.observe()
-  setObserver.observe()
+observer.observe()
+pictureObserver.observe()
+setObserver.observe()
+
+
+
