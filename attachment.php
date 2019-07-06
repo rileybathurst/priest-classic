@@ -10,21 +10,15 @@
 
 			<!-- controlled completley by grid for strange order process -->
 			<div class="poster">
-				<div class="poster-thumbnail"><?php the_post_thumbnail(); ?></div>
+				<div class="poster-thumbnail"><?php $image_size = apply_filters( 'wporg_attachment_size', 'large' );
+					echo wp_get_attachment_image( get_the_ID(), $image_size ); ?>
+				</div>
 				<h4 class="over-flex-bg over-flex no-margin-bottom text-center gp-4">
-					<?php if ( has_excerpt() ) { ?>
-
-						<div class="entry-caption">
-							<?php the_excerpt(); ?>
-						</div><!-- .entry-caption -->
-					<?php } ?>
+					<?php if ( has_excerpt() ) {
+						the_excerpt();
+					} ?>
 				</h4>
 			</div> <!-- .poster -->
-
-			<div class="img-100 entry-attachment">
-				<?php $image_size = apply_filters( 'wporg_attachment_size', 'large' );
-					echo wp_get_attachment_image( get_the_ID(), $image_size ); ?>
-			</div><!-- .entry-attachment -->
 
 		</div> <!-- .grid-container -->
 	</article> <!-- #post -->
@@ -33,29 +27,30 @@
 <?php $the_query = new WP_Query( array (
 		's' => get_the_excerpt()
 	) );
-	if ( $the_query->have_posts() ) {
-		while ( $the_query->have_posts() ) {
-			$the_query->the_post();
+	if ( $the_query->have_posts() ) { ?>
 
-			$remove = array(
-				"&#8208;", // hypen
-				"&#8209;", // non-breaking hypen
-				"&#8210;", // figure dash
-				"&#8211;", // en dash
-				"&#8212;", // em dash
-				"&#8213;", // horizontal bar
-				"christchurch",
-				"Christchurch",
-				"CHRISTCHURCH"
-			);
-			$short_title = str_replace ( $remove, "", get_the_title()); ?>
-
-			<div class="grid-container">
-				<div class="grid-x grid-padding-x gm-tb text-center">
-					<div class="cell gp-tb-large">
-						<h4>Find More products in</h4>
-					</div>
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x gm-tb text-center">
+				<div class="cell gp-tb-large">
+					<h4>Find similar products in</h4>
 				</div>
+			</div>
+
+			<?php while ( $the_query->have_posts() ) {
+				$the_query->the_post();
+
+				$remove = array(
+					"&#8208;", // hypen
+					"&#8209;", // non-breaking hypen
+					"&#8210;", // figure dash
+					"&#8211;", // en dash
+					"&#8212;", // em dash
+					"&#8213;", // horizontal bar
+					"christchurch",
+					"Christchurch",
+					"CHRISTCHURCH"
+				);
+				$short_title = str_replace ( $remove, "", get_the_title()); ?>
 
 				<div class="grid-x grid-padding-x gm-tb">
 					<div class="small-12 large-6 cell gp-tb-large">
@@ -70,13 +65,14 @@
 								<?php the_excerpt(); ?>
 							</div>
 							<a href="<?php the_permalink(); ?>" class="gm-4 button hollow">More about <?php echo $short_title; ?></a>
+
 						</div>
 					</div>
 				</div>
-			</div>
 
-		<?php }
-	}
+			<?php } ?>
+		</div>
+	<?php }
 	wp_reset_query(); // Restore global post data ?>
 
 </main>
