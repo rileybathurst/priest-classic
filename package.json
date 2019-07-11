@@ -18,6 +18,7 @@
     "fstream": "^1.0.12",
     "jquery": ">=3.4.1",
     "js-yaml": "^3.13.1",
+    "lodash.mergewith": "^4.6.2",
     "lozad": "^1.9.0",
     "motion-ui": "~2.0.3",
     "npm-check-updates": "^3.1.14",
