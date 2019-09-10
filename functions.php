@@ -77,13 +77,12 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
  * https://stackoverflow.com/questions/27602116/how-to-add-order-column-in-page-admin-wordpress
  */
 add_filter('manage_pages_columns', 'my_columns');
-
 function my_columns($columns) {
 	$columns['order'] = 'Order';
 	return $columns;
 }
-add_action('manage_pages_custom_column',  'my_show_columns');
 
+add_action('manage_pages_custom_column',  'my_show_columns');
 function my_show_columns($name) {
 	global $post;
 
