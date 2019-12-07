@@ -39,12 +39,18 @@ add_action( 'after_setup_theme', 'kulta_content_width', 0 );
 /* Enqueue scripts and styles. */
 
 function kulta_scripts() {
-
-	// Foundation style.
-	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/app.css' );
-
+	wp_enqueue_style( 'sass', get_template_directory_uri() . '/css/app.css' );
 }
 add_action( 'wp_enqueue_scripts', 'kulta_scripts' );
+
+function myguten_enqueue() {
+	wp_enqueue_script(
+		'myguten-script',
+		get_template_directory_uri() . '/myguten.js',
+		array( 'wp-blocks', 'wp-element', 'wp-components' )
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'myguten_enqueue' );
 
 /* https://www.pressmate.io/adding-google-fonts-to-wordpress-theme-manually/ */
 function right_way_to_include_google_fonts() {
@@ -73,9 +79,7 @@ function wpcodex_add_excerpt_support_for_pages() {
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
-/**
- * https://stackoverflow.com/questions/27602116/how-to-add-order-column-in-page-admin-wordpress
- */
+// https://stackoverflow.com/questions/27602116/how-to-add-order-column-in-page-admin-wordpress
 add_filter('manage_pages_columns', 'my_columns');
 function my_columns($columns) {
 	$columns['order'] = 'Order';
@@ -93,3 +97,22 @@ function my_show_columns($name) {
 			break;
 	}
 }
+
+// Register guten meta block
+function myguten_register_post_meta() {
+	register_post_meta( 'post', 'myguten_meta_block_field', array(
+		'show_in_rest' => true,
+		'single' => true,
+		'type' => 'string',
+	) );
+}
+add_action( 'init', 'myguten_register_post_meta' );
+
+// template block adds this to every post
+function myguten_register_template() {
+	$post_type_object = get_post_type_object( 'post' );
+	$post_type_object->template = array(
+		array( 'myguten/meta-block' ),
+	);
+}
+add_action( 'init', 'myguten_register_template' );

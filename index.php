@@ -11,7 +11,18 @@
 
 
 					<div class="poster gm-tb"> <!-- I should fix up the double poster class as its not quite right -->
-						<div class="poster-thumbnail"><?php the_post_thumbnail(); ?></div>
+						<div class="poster-thumbnail">
+							<?php
+								$value = get_post_meta( get_the_ID(), 'myguten_meta_block_field', true );
+								if ( $value ) { ?>
+									<video>
+										<source src="<?php echo $value; ?>">
+									</video>
+								<?php } else {
+									the_post_thumbnail();
+								} // this needs something incase there isnt either
+							?>
+						</div>
 						<h4 class="over-flex-bg over-flex no-margin-bottom text-center gp-4"><?php the_title(); ?></h4>
 					</div>
 
@@ -64,6 +75,7 @@
 		</div>
 	</div>
 	<?php endif; ?>
+
 </main>
 
 </div> <!-- .keep -->
