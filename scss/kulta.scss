@@ -2,33 +2,33 @@
 -------------------------------------------------------------- */
 
 /*
-  1. full
-  2. Spacing
-  3. Sticky
-  4. Vimeo
-  5. Fixes
+	1. full
+	2. Spacing
+	3. Sticky
+	4. Vimeo
+	5. Fixes
 	 5.2 Images
-  6. Off Canvas
-  7. Social Nav
-  8. Feature Cats
-  9. Comments
-  10. Genericons
-  11. Box
-  999. Required Worpess css
+	6. Off Canvas
+	7. Social Nav
+	8. Feature Cats
+	9. Comments
+	10. Genericons
+	11. Box
+	999. Required Worpess css
 	- 999.2 Gallery
 
 -------------------------------------------------------------- */
 
 /*  1.
-  Full width coloured background
-  This is first incase after this it needs more classes
+	Full width coloured background
+	This is first incase after this it needs more classes
 -------------------------------------------------------------- */
 
 /* Medium Up screens - fixes header issue
 @media only screen and (min-width: 40.063em) {
-  .full {
+	.full {
 	width: 100%;
-  }
+	}
 } */
 
 main {
@@ -36,142 +36,142 @@ main {
 }
 
 .bg-primary {
-  background: $primary-color;
+	background: $primary-color;
 
-  a {
+	a {
 	color: $white;
-  }
-  a:hover {
+	}
+	a:hover {
 	color: $light-gray;
-  }
-  cite {
+	}
+	cite {
 	color: $medium-gray;
-  }
+	}
 }
 
 .bg-secondary {
-  background: $secondary-color;
+	background: $secondary-color;
 
-  a {
+	a {
 	color: $white;
-  }
-  a:hover {
+	}
+	a:hover {
 	color: $light-gray;
-  }
+	}
 }
 
 .bg-light-gray {
-  background: $light-gray;
+	background: $light-gray;
 }
 
 .bg-medium-gray {
-  background: $medium-gray;
+	background: $medium-gray;
 }
 
 .bg-dark-gray {
-  background: $dark-gray;
+	background: $dark-gray;
 
-  a {
+	a {
 	color: $white;
-  }
+	}
 
-  a:hover {
+	a:hover {
 	color: $light-gray;
-  }
+	}
 }
 
 .bg-black {
-  background: $black;
-  color: $white;
-
-  .hidden-link {
+	background: $black;
 	color: $white;
-  }
+
+	.hidden-link {
+	color: $white;
+	}
 }
 
 .primary-text {
-  color: $primary-color;
+	color: $primary-color;
 }
 
 .white-a {
-  color: $white;
+	color: $white;
 }
 
 
 white-a:hover {
-  color: $light-gray;
-  background: $black;
+	color: $light-gray;
+	background: $black;
 }
 
 .hidden-link {
-  color: $black;
+	color: $black;
 }
 
 .shadow {
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
 .shadow-darker {
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.32),0 2px 10px 0 rgba(0,0,0,0.24);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.32),0 2px 10px 0 rgba(0,0,0,0.24);
 }
 
 .attachment-post-thumbnail {
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
 .excerpt {
-  color: blue;
+	color: blue;
 }
 
 /*  2. Spacing
-  Used around the page for readability styling
+	Used around the page for readability styling
 -------------------------------------------------------------- */
 
 .ngm-top {
-  margin-top: -$global-margin;
+	margin-top: -$global-margin;
 }
 
 .ngm-bottom {
-  margin-bottom: -$global-margin;
+	margin-bottom: -$global-margin;
 }
 
 .gm-top {
-  margin-top: $global-margin;
+	margin-top: $global-margin;
 }
 
 .gm-bottom {
-  margin-bottom: $global-margin;
+	margin-bottom: $global-margin;
 }
 
 .gm-tb {
-  margin-top: $global-margin;
-  margin-bottom: $global-margin;
+	margin-top: $global-margin;
+	margin-bottom: $global-margin;
 }
 
 .gp-top {
-  padding-top: $global-padding;
+	padding-top: $global-padding;
 }
 
 .gp2-top {
-  padding-top: $global-padding*2;
+	padding-top: $global-padding*2;
 }
 
 .gp-bottom {
-  padding-bottom: $global-padding;
+	padding-bottom: $global-padding;
 }
 
 .gp3-bottom {
-  padding-bottom: $global-padding*3;
+	padding-bottom: $global-padding*3;
 }
 
 .gp-tb {
-  padding-top: $global-margin;
-  padding-bottom: $global-margin;
+	padding-top: $global-margin;
+	padding-bottom: $global-margin;
 }
 
 .gp2-tb {
-  padding-top: $global-margin*2;
-  padding-bottom: $global-margin*2;
+	padding-top: $global-margin*2;
+	padding-bottom: $global-margin*2;
 }
 
 .gp-tb-large {
@@ -182,239 +182,239 @@ white-a:hover {
 }
 
 .gm-4 {
-  margin: $global-margin;
+	margin: $global-margin;
 }
 
 .gp-4 {
-  padding: $global-padding;
+	padding: $global-padding;
 }
 
 .no-margin-bottom {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 no-padding-top {
-  padding-top: 0;
+	padding-top: 0;
 }
 
 /*
-  3 - Sticky
-  Wordpress and foundation both have base classes called sticky so this gives pressedant to wordpress
+	3 - Sticky
+	Wordpress and foundation both have base classes called sticky so this gives pressedant to wordpress
 --------------------------------------------------------------- */
 .sticky {
-  position: relative;
+	position: relative;
 }
 
 .sticky .featured-title {
-  background: $medium-gray;
-  display: block;
-  color: $white;
+	background: $medium-gray;
+	display: block;
+	color: $white;
 }
 
 [type="text"], [type="password"], [type="date"], [type="datetime"], [type="datetime-local"], [type="month"], [type="week"], [type="email"], [type="number"], [type="search"], [type="tel"], [type="time"], [type="url"], [type="color"], textarea {
-  background: $light-gray;
+	background: $light-gray;
 }
 
 // wordpress controls this in a way it should be hidden
 .featured-title {
-  display: none;
+	display: none;
 }
 
 /*  5 - Fixes - foundation 6 overwrite is written here so foundation can be updated
 -------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .one-point-two-em {
-  font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 /* p {
-  @include breakpoint(small) {
+	@include breakpoint(small) {
 	text-align: left;
-  }
-  @include breakpoint(large) {
+	}
+	@include breakpoint(large) {
 	text-align: justify;
-  }
+	}
 } */
 
 .bold-big {
-  font-weight: normal;
+	font-weight: normal;
 
-  @include breakpoint(large) {
+	@include breakpoint(large) {
 	font-weight: bold;
-  }
+	}
 }
 
 nav, .menu-primary-container, .force-menu-style {
-  font-weight: bold;
-  font-size: 1.2em;
-  font-family: $header-font-family;
+	font-weight: bold;
+	font-size: 1.2em;
+	font-family: $header-font-family;
 }
 
 .menu {
-  justify-content: center;
+	justify-content: center;
 }
 
 .menu-primary-container a:hover {
-  background: #006087; // hack I need to make this from a variable
+	background: #006087; // hack I need to make this from a variable
 }
 
 .menu li {
-  @include breakpoint(medium) {
+	@include breakpoint(medium) {
 	padding: $global-padding/2;
-  }
+	}
 }
 
 /* Fix for automatic last-child float right from foundation */
 .lastchildleft li:last-child {
-  float: left !important;
+	float: left !important;
 }
 
 /* Block grid can also be used */
 .odd-clear li:nth-child(odd) {
-  clear: both;
+	clear: both;
 }
 
 abbr[title] {
-  border-bottom: none;
+	border-bottom: none;
 }
 abbr {
-  font-size: 100%;
-  text-decoration: underline;
+	font-size: 100%;
+	text-decoration: underline;
 }
 
 /*
-  5.2 Images
+	5.2 Images
 ------------------------------------------------ */
 
 .img-100, .img-100 img {
-  width: 100%;
+	width: 100%;
 }
 
 .img-100-high {
-  overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 // sets the height cuts the side
 .img-100-high img {
-  height: 100%;
+	height: 100%;
 }
 
 iframe {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 .hero {
-  display: grid;
-  max-width: 89.9em; // stops 3 or more columns
-  margin: $global-margin auto; // center float
-  padding: $global-padding; // small size never get to the edge
-  grid-gap: $global-margin;
+	display: grid;
+	max-width: 89.9em; // stops 3 or more columns
+	margin: $global-margin auto; // center float
+	padding: $global-padding; // small size never get to the edge
+	grid-gap: $global-margin;
 
-  // start doing columns once its bigger - slightly a hack
-  @include breakpoint(medium) {
+	// start doing columns once its bigger - slightly a hack
+	@include breakpoint(medium) {
 	grid-template-columns: repeat(auto-fill, minmax(30em,1fr));
-  }
+	}
 }
 
 /*
-  grids
+	grids
 ------------------------------------------------ */
 
 .site {
-  display: grid;
-  min-height: 100vh;
+	display: grid;
+	min-height: 100vh;
 }
 
 footer {
-  align-self: end;
+	align-self: end;
 }
 
 /*
-  service grids
+	service grids
 ------------------------------------------------ */
 
 .hero-logo {
-  display: grid;
-  justify-items: center;
+	display: grid;
+	justify-items: center;
 }
 
 .hero-logo a {
-  max-width: 33%;
+	max-width: 33%;
 }
 
 .hero-logo a {
-  @include breakpoint(medium) {
-	  max-width: 20%;
-	  margin-top: $global-margin;
-	  margin-bottom: $global-margin*2;
-  }
+	@include breakpoint(medium) {
+		max-width: 20%;
+		margin-top: $global-margin;
+		margin-bottom: $global-margin*2;
+	}
 }
 
 .service-grid { // well that name is now wrong
-  display: grid;
-  // grid-template-columns: 1;
-  // grid-template-rows: 1;
+	display: grid;
+	// grid-template-columns: 1;
+	// grid-template-rows: 1;
 }
 
 .service-grid img, .service-grid h4, {
-  grid-column: 1;
-  grid-row: 1;
+	grid-column: 1;
+	grid-row: 1;
 }
 
 .service-grid-bg {
-  background-color: rgba(10, 127, 189, 0.7); //rgba has alpha so not sure about how to have a variable
-  align-self: end;
+	background-color: rgba(10, 127, 189, 0.7); //rgba has alpha so not sure about how to have a variable
+	align-self: end;
 }
 
 .inline-block-100w { // hack to make the a all the way across
-  display: inline-block;
-  width: 100%;
+	display: inline-block;
+	width: 100%;
 }
 
 .service-grid-bg a {
-  color: $white;
+	color: $white;
 }
 
 .service-grid-bg a:hover {
-  color: $light-gray;
+	color: $light-gray;
 }
 
 /*
-  display grids
+	display grids
 ------------------------------------------------ */
 
 .display-grid { //terrible names
-  display: flex;
-  justify-items: center;
+	display: flex;
+	justify-items: center;
 }
 
 .grid-icon { //terrible names
-  grid-column: 1;
-  align-self: stretch;
+	grid-column: 1;
+	align-self: stretch;
 }
 
 .grid-text { //terrible names
-  grid-column: 2;
-  align-self: center;
+	grid-column: 2;
+	align-self: center;
 }
 
 .footer-icons {
-  display: grid;
-  justify-items: center;
+	display: grid;
+	justify-items: center;
 }
 
 .footer-icon-icon { //terrible names
-  grid-column: 1;
-  grid-row: 1;
-  align-self: center;
+	grid-column: 1;
+	grid-row: 1;
+	align-self: center;
 
-  @include breakpoint(large) {
+	@include breakpoint(large) {
 	justify-self: end;
-  }
+	}
 }
 
 .footer-icon-icon svg {
@@ -426,38 +426,64 @@ footer {
 }
 
 .footer-icon-text {
-  grid-column: 1;
-  grid-row: 2;
-  align-self: center;
+	grid-column: 1;
+	grid-row: 2;
+	align-self: center;
 
-  @include breakpoint(large) {
+	@include breakpoint(large) {
 	grid-column: 2;
 	grid-row: 1;
 	justify-self: start;
-  }
+	}
 }
 
 .post-flex {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  @include breakpoint(large) {
+	@include breakpoint(large) {
 	flex-direction: column-reverse;
-  }
+	}
+}
+
+.crown {
+	display: grid;
+	margin: $global-margin 0;
+}
+
+.poster-thumbnail {
+	grid-row: 1;
+	grid-column: 1;
+	z-index: -1;
+
+	img, video {
+	width: 100%;
+	}
+}
+
+.crown-title {
+	grid-row: 1;
+	grid-column: 1;
+	background: rgba(10,127,189,0.7);
+	padding: $global-padding;
+	align-self: end;
+	text-align: center;
+	color: $white;
+	margin-bottom: 6px; // guess and check
 }
 
 .poster {
-  display: grid;
-  grid-template-areas:
-  "postcard"
-  "bg"
-  "title"
-  "textual"
-  "gallery";
-  grid-gap: $global-margin;
+	display: grid;
+	grid-template-areas:
+	"postcard"
+	"bg"
+	"title"
+	"textual"
+	"gallery";
+	grid-gap: $global-margin;
 	grid-template-columns: 1fr;
 
-  @include breakpoint(medium) {
+	@include breakpoint(medium) {
 	grid-template-areas:
 	"postcard postcard"
 	"gallery  textual"
@@ -465,16 +491,10 @@ footer {
 	;
 
 	grid-template-columns: 1fr 1fr;
-  }
+	}
 }
 
-.poster-thumbnail {
-  grid-area: postcard; // grid-row-start / grid-row-end / grid-column-start / grid-coulmn-end
 
-  img {
-	width: 100%;
-  }
-}
 
 .poster p, .poster ul { // causing issues as the wp-block-gallery is also a ul
 grid-column: 1;
@@ -484,67 +504,67 @@ grid-column: 1;
 }
 
 .over-flex {
-  grid-area: postcard;
-  align-self: end;
-  background-color: rgba(10, 127, 189, 0.7); //rgba has alpha so not sure about how to have a variable
-  color: $white;
+	grid-area: postcard;
+	align-self: end;
+	background-color: rgba(10, 127, 189, 0.7); //rgba has alpha so not sure about how to have a variable
+	color: $white;
 }
 
 .poster-text {
-  grid-area: textual;
+	grid-area: textual;
 }
 
 .poster .wp-block-gallery {
-  // grid-area: gallery;
-  margin-left: 0;
+	// grid-area: gallery;
+	margin-left: 0;
 }
 
 
 // home page animation
 .cfimg {
-  display: grid;
-  justify-items: stretch;
-  align-items: stretch;
+	display: grid;
+	justify-items: stretch;
+	align-items: stretch;
 }
 .cfimg picture {
-  grid-column: 1;
-  grid-row: 1;
-  animation-name: FadeInOut;
-  animation-duration: 16s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+	grid-column: 1;
+	grid-row: 1;
+	animation-name: FadeInOut;
+	animation-duration: 16s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 }
 
 /* Just do the link I dont understand the math */
 @keyframes FadeInOut {
-  0% {
-  opacity:1;
-  }
-  18.75% {
-  opacity:1;
-  }
-  25% {
-  opacity:0;
-  }
-  93.75% {
-  opacity:0;
-  }
-  100% {
-  opacity:1;
-  }
+	0% {
+	opacity:1;
+	}
+	18.75% {
+	opacity:1;
+	}
+	25% {
+	opacity:0;
+	}
+	93.75% {
+	opacity:0;
+	}
+	100% {
+	opacity:1;
+	}
 }
 
 .cfimg picture:nth-of-type(1) {
-  animation-delay: 12s;
+	animation-delay: 12s;
 }
 .cfimg picture:nth-of-type(2) {
-  animation-delay: 8s;
+	animation-delay: 8s;
 }
 .cfimg picture:nth-of-type(3) {
-  animation-delay: 4s;
+	animation-delay: 4s;
 }
 .cfimg picture:nth-of-type(4) {
-  animation-delay: 0;
+	animation-delay: 0;
 }
 
 
@@ -553,59 +573,59 @@ grid-column: 1;
 --------------------------------------------------------------*/
 
 .off-canvas a {
-  color: $black;
+	color: $black;
 }
 
 /*
-  999
-  Required Worpess css - adapted from Twenty Sixteen
+	999
+	Required Worpess css - adapted from Twenty Sixteen
 ------------------------------------------------------------- */
 
 .wp-caption {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 .wp-caption-text {
-  margin-top: $global-margin;
-  font-style: italic;
+	margin-top: $global-margin;
+	font-style: italic;
 }
 
 .screen-reader-text {
-  position: static !important;
+	position: static !important;
 }
 
 .screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute !important;
-  width: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
 }
 
 .screen-reader-text {
-  position: absolute !important;
+	position: absolute !important;
 }
 
 .gallery-caption {
-  font-style: italic;
+	font-style: italic;
 }
 
 img .alignleft {
-  padding-right: $global-padding;
+	padding-right: $global-padding;
 }
 
 .aligncenter {
-  clear: both;
-  display: block;
-  margin: 0 auto;
+	clear: both;
+	display: block;
+	margin: 0 auto;
 }
 
 .alignright {
-  float: right;
+	float: right;
 }
 
 .bypostauthor {
-  display: block;
+	display: block;
 }
 
 /**
@@ -613,84 +633,84 @@ img .alignleft {
  */
 
 .gallery-item {
-  display: inline-block;
-  text-align: center;
-  padding: $global-padding;
-  width: 100%;
-  vertical-align: bottom;
+	display: inline-block;
+	text-align: center;
+	padding: $global-padding;
+	width: 100%;
+	vertical-align: bottom;
 }
 
 /* Small Up screens */
 @media only screen and (max-width: 40em) { /* min-width 1025px, large screens */
 
-  .gallery-columns-2 .gallery-item, .gallery-columns-3 .gallery-item, .gallery-columns-4 .gallery-item, .gallery-columns-5 .gallery-item, .gallery-columns-6 .gallery-item, .gallery-columns-7 .gallery-item, .gallery-columns-8 .gallery-item, .gallery-columns-9 .gallery-item {
+	.gallery-columns-2 .gallery-item, .gallery-columns-3 .gallery-item, .gallery-columns-4 .gallery-item, .gallery-columns-5 .gallery-item, .gallery-columns-6 .gallery-item, .gallery-columns-7 .gallery-item, .gallery-columns-8 .gallery-item, .gallery-columns-9 .gallery-item {
 	max-width: 100%;
-  }
+	}
 }
 
 /* Medium Up screens */
 @media only screen and (min-width: 40.063em) { /* min-width 1025px, large screens */
 
-  .gallery-columns-2 .gallery-item, .gallery-columns-3 .gallery-item, .gallery-columns-4 .gallery-item, .gallery-columns-5 .gallery-item, .gallery-columns-6 .gallery-item, .gallery-columns-7 .gallery-item, .gallery-columns-8 .gallery-item, .gallery-columns-9 .gallery-item {
+	.gallery-columns-2 .gallery-item, .gallery-columns-3 .gallery-item, .gallery-columns-4 .gallery-item, .gallery-columns-5 .gallery-item, .gallery-columns-6 .gallery-item, .gallery-columns-7 .gallery-item, .gallery-columns-8 .gallery-item, .gallery-columns-9 .gallery-item {
 	max-width: 50%;
-  }
+	}
 }
 
 /* Large Up screens */
 @media only screen and (min-width: 64.063em) { /* min-width 1025px, large screens */
 
-  .gallery-columns-2 .gallery-item {
+	.gallery-columns-2 .gallery-item {
 	max-width: 50%;
-  }
+	}
 
-  .gallery-columns-3 .gallery-item {
+	.gallery-columns-3 .gallery-item {
 	max-width: 33.33%;
-  }
+	}
 
-  .gallery-columns-4 .gallery-item {
+	.gallery-columns-4 .gallery-item {
 	max-width: 25%;
-  }
+	}
 
-  .gallery-columns-5 .gallery-item {
+	.gallery-columns-5 .gallery-item {
 	max-width: 20%;
-  }
+	}
 
-  .gallery-columns-6 .gallery-item {
+	.gallery-columns-6 .gallery-item {
 	max-width: 16.66%;
-  }
+	}
 
-  .gallery-columns-7 .gallery-item {
+	.gallery-columns-7 .gallery-item {
 	max-width: 14.28%;
-  }
+	}
 
-  .gallery-columns-8 .gallery-item {
+	.gallery-columns-8 .gallery-item {
 	max-width: 12.5%;
-  }
+	}
 
-  .gallery-columns-9 .gallery-item {
+	.gallery-columns-9 .gallery-item {
 	max-width: 11.11%;
-  }
+	}
 }
 
 .gallery-icon img {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 .gallery-caption {
-  color: $medium-gray;
-  display: block;
-  font-size: 13px;
-  font-size: 0.8125rem;
-  font-style: italic;
-  line-height: 1.6153846154;
-  padding-top: 0.5384615385em;
+	color: $medium-gray;
+	display: block;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-style: italic;
+	line-height: 1.6153846154;
+	padding-top: 0.5384615385em;
 }
 
 .gallery-columns-6 .gallery-caption,
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
-  display: none;
+	display: none;
 }
 
 

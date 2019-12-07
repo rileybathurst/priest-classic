@@ -43,15 +43,6 @@ function kulta_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'kulta_scripts' );
 
-function myguten_enqueue() {
-	wp_enqueue_script(
-		'myguten-script',
-		get_template_directory_uri() . '/myguten.js',
-		array( 'wp-blocks', 'wp-element', 'wp-components' )
-	);
-}
-add_action( 'enqueue_block_editor_assets', 'myguten_enqueue' );
-
 /* https://www.pressmate.io/adding-google-fonts-to-wordpress-theme-manually/ */
 function right_way_to_include_google_fonts() {
 	if (!is_admin()) {
@@ -98,21 +89,42 @@ function my_show_columns($name) {
 	}
 }
 
-// Register guten meta block
+// test
+function myguten_enqueue() {
+    wp_enqueue_script(
+        'myguten-script',
+        get_template_directory_uri() . '/my-guten.js',
+        array( 'wp-blocks', 'wp-element', 'wp-components' )
+    );
+}
+add_action( 'enqueue_block_editor_assets', 'myguten_enqueue' );
+
+// register custom meta tag field
 function myguten_register_post_meta() {
-	register_post_meta( 'post', 'myguten_meta_block_field', array(
-		'show_in_rest' => true,
-		'single' => true,
-		'type' => 'string',
-	) );
+    register_post_meta( '', 'myguten_meta_block_field', array(
+        'show_in_rest' => true,
+        'single' => true,
+        'type' => 'string',
+    ) );
 }
 add_action( 'init', 'myguten_register_post_meta' );
 
-// template block adds this to every post
-function myguten_register_template() {
-	$post_type_object = get_post_type_object( 'post' );
-	$post_type_object->template = array(
-		array( 'myguten/meta-block' ),
-	);
+// featured video script
+function featured_video_enqueue() {
+    wp_enqueue_script(
+        'featured-video-script',
+        get_template_directory_uri() . '/featured-video.js',
+        array( 'wp-blocks', 'wp-element', 'wp-components' )
+    );
 }
-add_action( 'init', 'myguten_register_template' );
+add_action( 'enqueue_block_editor_assets', 'featured_video_enqueue' );
+
+// featured video script
+function featured_video_register_post_meta() {
+    register_post_meta( '', 'featured_video_meta_block', array(
+        'show_in_rest' => true,
+        'single' => true,
+        'type' => 'string',
+    ) );
+}
+add_action( 'init', 'featured_video_register_post_meta' );

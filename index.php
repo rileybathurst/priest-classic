@@ -10,12 +10,12 @@
 				<div class="grid-container">
 
 
-					<div class="poster gm-tb"> <!-- I should fix up the double poster class as its not quite right -->
+					<div class="crown"> <!-- I should fix up the double poster class as its not quite right -->
 						<div class="poster-thumbnail">
 							<?php
-								$value = get_post_meta( get_the_ID(), 'myguten_meta_block_field', true );
+								$value = get_post_meta( get_the_ID(), 'featured_video_meta_block', true );
 								if ( $value ) { ?>
-									<video>
+									<video controls autoplay muted loop>
 										<source src="<?php echo $value; ?>">
 									</video>
 								<?php } else {
@@ -23,7 +23,7 @@
 								} // this needs something incase there isnt either
 							?>
 						</div>
-						<h4 class="over-flex-bg over-flex no-margin-bottom text-center gp-4"><?php the_title(); ?></h4>
+						<h4 class="crown-title"><?php the_title(); ?></h4>
 					</div>
 
 					<!-- controlled completley by grid for strange order process -->

@@ -3,16 +3,17 @@
 	var registerBlockType = wp.blocks.registerBlockType;
 	var TextControl = wp.components.TextControl;
  
-	registerBlockType( 'myguten/meta-block', {
+	// https://developer.wordpress.org/block-editor/developers/block-api/block-registration/
+	registerBlockType( 'kulta/featured-video-block', {
 		title: 'Featured Video',
-		icon: 'video',
+		icon: 'video-alt2',
 		category: 'common',
  
 		attributes: {
 			blockValue: {
 				type: 'string',
 				source: 'meta',
-				meta: 'myguten_meta_block_field'
+				meta: 'featured_video_meta_block'
 			}
 		},
  
@@ -28,7 +29,7 @@
 				'div',
 				{ className: className },
 				el( TextControl, {
-					label: 'Meta Block Field',
+					label: 'Featured Video Meta Block',
 					value: props.attributes.blockValue,
 					onChange: updateBlockValue
 				} )
