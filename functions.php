@@ -40,8 +40,24 @@ add_action( 'after_setup_theme', 'kulta_content_width', 0 );
 
 function kulta_scripts() {
 	wp_enqueue_style( 'sass', get_template_directory_uri() . '/css/app.css' );
+	wp_register_style( 'myguten-style', get_template_directory_uri() . '/css/gutenberg.css' );
 }
 add_action( 'wp_enqueue_scripts', 'kulta_scripts' );
+
+/**
+ * Gutenberg scripts and styles
+ * @link https://www.billerickson.net/block-styles-in-gutenberg/
+ */
+function be_gutenberg_scripts() {
+	wp_enqueue_script(
+		'be-editor',
+		get_stylesheet_directory_uri() . '/js/gutenberg.js',
+		array( 'wp-blocks', 'wp-dom' ),
+		filemtime( get_stylesheet_directory() . '/js/gutenberg.js' ),
+		true
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'be_gutenberg_scripts' );
 
 /* https://www.pressmate.io/adding-google-fonts-to-wordpress-theme-manually/ */
 function right_way_to_include_google_fonts() {
@@ -89,42 +105,32 @@ function my_show_columns($name) {
 	}
 }
 
-// test
-function myguten_enqueue() {
-    wp_enqueue_script(
-        'myguten-script',
-        get_template_directory_uri() . '/my-guten.js',
-        array( 'wp-blocks', 'wp-element', 'wp-components' )
-    );
-}
-add_action( 'enqueue_block_editor_assets', 'myguten_enqueue' );
-
 // register custom meta tag field
 function myguten_register_post_meta() {
-    register_post_meta( '', 'myguten_meta_block_field', array(
-        'show_in_rest' => true,
-        'single' => true,
-        'type' => 'string',
-    ) );
+	register_post_meta( '', 'myguten_meta_block_field', array(
+		'show_in_rest' => true,
+		'single' => true,
+		'type' => 'string',
+	) );
 }
 add_action( 'init', 'myguten_register_post_meta' );
 
 // featured video script
 function featured_video_enqueue() {
-    wp_enqueue_script(
-        'featured-video-script',
-        get_template_directory_uri() . '/featured-video.js',
-        array( 'wp-blocks', 'wp-element', 'wp-components' )
-    );
+	wp_enqueue_script(
+		'featured-video-script',
+		get_template_directory_uri() . '/featured-video.js',
+		array( 'wp-blocks', 'wp-element', 'wp-components' )
+	);
 }
 add_action( 'enqueue_block_editor_assets', 'featured_video_enqueue' );
 
 // featured video script
 function featured_video_register_post_meta() {
-    register_post_meta( '', 'featured_video_meta_block', array(
-        'show_in_rest' => true,
-        'single' => true,
-        'type' => 'string',
-    ) );
+	register_post_meta( '', 'featured_video_meta_block', array(
+		'show_in_rest' => true,
+		'single' => true,
+		'type' => 'string',
+	) );
 }
 add_action( 'init', 'featured_video_register_post_meta' );

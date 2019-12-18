@@ -360,7 +360,7 @@ footer {
 	// grid-template-rows: 1;
 }
 
-.service-grid img, .service-grid h4, {
+.service-grid img, .service-grid h4 {
 	grid-column: 1;
 	grid-row: 1;
 }
@@ -753,4 +753,182 @@ img .alignleft {
 		grid-column: 1 !important; // trying to keep this inline but also control the ul for other lists
 		grid-row: 1;
 	}
+}
+
+
+// test
+.is-style-box-title {
+	color: burlywood;
+}
+// end of test
+
+// gutenbery slider
+.is-style-slider-gallery ul {
+	display: grid;
+	justify-items: stretch;
+	align-items: stretch;
+
+	li {
+		grid-row: 1;
+		grid-column: 1;
+		animation-name: FadeInOut;
+		animation-duration: 16s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+	}
+}
+
+/* Just do the link I dont understand the math */
+@keyframes FadeInOut {
+	0% {
+	opacity:1;
+	}
+	18.75% {
+	opacity:1;
+	}
+	25% {
+	opacity:0;
+	}
+	93.75% {
+	opacity:0;
+	}
+	100% {
+	opacity:1;
+	}
+}
+
+.is-style-slider-gallery ul li:nth-of-type(1) {
+	animation-delay: 12s;
+}
+.is-style-slider-gallery ul li:nth-of-type(2) {
+	animation-delay: 8s;
+}
+.is-style-slider-gallery ul li:nth-of-type(3) {
+	animation-delay: 4s;
+}
+.is-style-slider-gallery ul li:nth-of-type(4) {
+	animation-delay: 0;
+}
+
+
+
+
+.is-style-featured-media-text {
+	background: $light-gray;
+	margin-bottom: $global-margin*2;
+	grid-template-columns: 1fr !important;
+
+	> div {
+		padding: 0 !important; // overwrite .wp-block-media-text .wp-block-media-text__content
+		grid-row: 2 !important;
+		grid-column: 1 !important;
+	}
+
+	h4 {
+		padding: $global-padding;
+		padding-left: $global-padding*2;
+		background-color: rgba(10, 127, 189, 0.7); //rgba has alpha so not sure about how to have a variable
+		a {
+			color: white; // remove this as its a link but testing
+		}
+	}
+
+	p {
+		// padding: $global-padding;
+		padding-left: $global-padding*2;
+		padding-right: $global-padding;
+	}
+	
+	
+}
+
+
+/*
+.service-grid { // well that name is now wrong
+	display: grid;
+	// grid-template-columns: 1;
+	// grid-template-rows: 1;
+}
+
+.service-grid img, .service-grid h4 {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.service-grid-bg {
+	background-color: rgba(10, 127, 189, 0.7); //rgba has alpha so not sure about how to have a variable
+	align-self: end;
+}
+
+.inline-block-100w { // hack to make the a all the way across
+	display: inline-block;
+	width: 100%;
+}
+
+.service-grid-bg a {
+	color: $white;
+}
+
+.service-grid-bg a:hover {
+	color: $light-gray;
+}
+*/
+
+.page-template-page-swiss article {
+	max-width: 75rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $global-padding;
+	padding-right: $global-padding;
+
+	.attachment-post-thumbnail {
+		margin-bottom: $global-margin*2;
+	}
+
+	.wp-block-column:not(:first-child) {
+		margin-left: $global-margin*2 !important; // overwrite default
+	}
+
+	.wp-block-media-text {
+		grid-template-columns: 1fr 1fr !important; // needs to be after a media query
+		grid-gap: $global-margin*2;
+		margin-bottom: $global-margin;
+
+		.wp-block-media-text__content {
+			padding: 0;
+		}
+	}
+}
+
+.is-style-swiss-separator:before {
+	border-style: solid;
+	border-color: $light-gray;
+	border-bottom-width: $global-padding/2;
+	content: '';
+	width: calc(50% - 1em);
+	// display: inline-block;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.is-style-swiss-separator {
+	margin: 0;
+	// display: flow-root; // doesnt work on ios
+	display: flex;
+	height: $global-padding/2;
+	margin-bottom: $global-margin;
+	border: none; // remove the original
+}
+
+.is-style-swiss-separator:after {
+	width: calc(50% - 1em);
+	content: '';
+	border-style: solid;
+	border-color: $light-gray;
+	border-bottom-width: $global-padding/2;
+	margin: 0;
+	padding: 0;
+	float: right;
+	margin-left: $global-margin*2;
 }
