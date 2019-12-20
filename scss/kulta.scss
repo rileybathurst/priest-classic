@@ -881,12 +881,17 @@ img .alignleft {
 	padding-left: $global-padding;
 	padding-right: $global-padding;
 
+	video {
+		max-width: 100%;
+		margin-bottom: $global-margin*3;
+	}
+
 	.attachment-post-thumbnail {
 		margin-bottom: $global-margin*2;
 	}
 
 	.wp-block-column:not(:first-child) {
-		margin-left: $global-margin*2 !important; // overwrite default
+		margin-left: $global-margin*2 !important; // overwrite default I would like to get down to as few important as possible I just need to work on the specificity
 	}
 
 	.wp-block-media-text {
@@ -895,7 +900,7 @@ img .alignleft {
 		margin-bottom: $global-margin;
 
 		.wp-block-media-text__content {
-			padding: 0;
+			padding: 0 !important;
 		}
 	}
 }

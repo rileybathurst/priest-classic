@@ -41,13 +41,18 @@ add_action( 'after_setup_theme', 'kulta_content_width', 0 );
 function kulta_scripts() {
 	wp_enqueue_style( 'sass', get_template_directory_uri() . '/css/app.css' );
 	wp_register_style( 'myguten-style', get_template_directory_uri() . '/css/gutenberg.css' );
+
+	/* cant go here it needs to be the specific type of script
+	wp_enqueue_script(
+        'myguten-script',
+        get_template_directory_uri() . 'myguten.js',
+        array( 'wp-blocks', 'wp-element', 'wp-components' )
+    ); */
 }
 add_action( 'wp_enqueue_scripts', 'kulta_scripts' );
 
-/**
- * Gutenberg scripts and styles
- * @link https://www.billerickson.net/block-styles-in-gutenberg/
- */
+// Gutenberg scripts and styles
+// @link https://www.billerickson.net/block-styles-in-gutenberg/
 function be_gutenberg_scripts() {
 	wp_enqueue_script(
 		'be-editor',
@@ -59,7 +64,7 @@ function be_gutenberg_scripts() {
 }
 add_action( 'enqueue_block_editor_assets', 'be_gutenberg_scripts' );
 
-/* https://www.pressmate.io/adding-google-fonts-to-wordpress-theme-manually/ */
+// https://www.pressmate.io/adding-google-fonts-to-wordpress-theme-manually/ */
 function right_way_to_include_google_fonts() {
 	if (!is_admin()) {
 		wp_register_style('google', 'https://fonts.googleapis.com/css?family=Roboto+Slab:700', array(), null, 'all');
@@ -70,21 +75,13 @@ function right_way_to_include_google_fonts() {
 }
 add_action('wp_enqueue_scripts', 'right_way_to_include_google_fonts');
 
-/* Add featured image support */
+// Add featured image support
 add_theme_support( 'post-thumbnails' );
 
 // Add featured image sizes
 add_image_size( 'HD', 1920, 0, false ); // width, height, crop
 add_image_size( 'WXGA', 1366, 0, false ); // width, height, crop
 add_image_size( 'phone', 640, 0, false ); // width, height, crop
-
-/**
- * Enables the Excerpt meta box in Page edit screen.
- */
-function wpcodex_add_excerpt_support_for_pages() {
-	add_post_type_support( 'page', 'excerpt' );
-}
-add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 
 // https://stackoverflow.com/questions/27602116/how-to-add-order-column-in-page-admin-wordpress
 add_filter('manage_pages_columns', 'my_columns');
@@ -104,16 +101,6 @@ function my_show_columns($name) {
 			break;
 	}
 }
-
-// register custom meta tag field
-function myguten_register_post_meta() {
-	register_post_meta( '', 'myguten_meta_block_field', array(
-		'show_in_rest' => true,
-		'single' => true,
-		'type' => 'string',
-	) );
-}
-add_action( 'init', 'myguten_register_post_meta' );
 
 // featured video script
 function featured_video_enqueue() {
