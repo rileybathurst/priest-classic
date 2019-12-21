@@ -890,31 +890,53 @@ img .alignleft {
 		margin-bottom: $global-margin*2;
 	}
 
-	.wp-block-column:not(:first-child) {
-		margin-left: $global-margin*2 !important; // overwrite default I would like to get down to as few important as possible I just need to work on the specificity
+	/*
+	.wp-block-column:not(:first-child) { this throws some design erros on small devices
+		// margin-left: $global-margin*2 !important; // overwrite default I would like to get down to as few important as possible I just need to work on the specificity
 	}
+	*/
 
 	.wp-block-media-text {
-		grid-template-columns: 1fr 1fr !important; // needs to be after a media query
-		grid-gap: $global-margin*2;
-		margin-bottom: $global-margin;
 
 		.wp-block-media-text__content {
 			padding: 0 !important;
 		}
+
+		@media (min-width: 600px) {
+			grid-template-columns: 1fr 1fr !important; // needs to be after a media query
+			grid-gap: $global-margin*2;
+			margin-bottom: $global-margin;
+		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .is-style-swiss-separator:before {
 	border-style: solid;
 	border-color: $light-gray;
 	border-bottom-width: $global-padding/2;
 	content: '';
-	width: calc(50% - 1em);
+	width: calc(100% - 1em);
 	// display: inline-block;
 	margin: 0;
 	padding: 0;
 	float: left;
+
+	@media (min-width: 600px) {
+		width: calc(50% - 1em);
+	}
 }
 
 .is-style-swiss-separator {
@@ -927,13 +949,16 @@ img .alignleft {
 }
 
 .is-style-swiss-separator:after {
-	width: calc(50% - 1em);
-	content: '';
-	border-style: solid;
-	border-color: $light-gray;
-	border-bottom-width: $global-padding/2;
-	margin: 0;
-	padding: 0;
-	float: right;
-	margin-left: $global-margin*2;
+
+	@media (min-width: 600px) {
+		width: calc(50% - 1em);
+		content: '';
+		border-style: solid;
+		border-color: $light-gray;
+		border-bottom-width: $global-padding/2;
+		margin: 0;
+		padding: 0;
+		float: right;
+		margin-left: $global-margin*2;
+	}
 }
