@@ -78,6 +78,8 @@ add_action('wp_enqueue_scripts', 'right_way_to_include_google_fonts');
 // Add featured image support
 add_theme_support( 'post-thumbnails' );
 
+add_theme_support( 'align-wide' );
+
 // Add featured image sizes
 add_image_size( 'HD', 1920, 0, false ); // width, height, crop
 add_image_size( 'WXGA', 1366, 0, false ); // width, height, crop
