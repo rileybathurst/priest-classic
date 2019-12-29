@@ -185,6 +185,10 @@ white-a:hover {
 	margin: $global-margin;
 }
 
+.gm-3 {
+	margin: 0 $global-margin $global-margin $global-margin; // top | right | bottom | left
+}
+
 .gp-4 {
 	padding: $global-padding;
 }
@@ -263,9 +267,7 @@ nav, .menu-primary-container, .force-menu-style {
 }
 
 .menu li {
-	@include breakpoint(medium) {
-	padding: $global-padding/2;
-	}
+	padding: $global-padding; // lets start setting a vertical rythm
 }
 
 /* Fix for automatic last-child float right from foundation */
@@ -325,7 +327,7 @@ iframe {
 ------------------------------------------------ */
 
 .site {
-	display: grid;
+	display: grid; // this just for the 100 vh but there might be a smarter way
 	min-height: 100vh;
 }
 
@@ -337,20 +339,22 @@ footer {
 	service grids
 ------------------------------------------------ */
 
+/*
 .hero-logo {
 	display: grid;
 	justify-items: center;
 }
+*/
 
 .hero-logo a {
+	display: block;
 	max-width: 33%;
-}
+	margin: 0 auto;
+	padding-top: $global-padding*2; // start doing more with a type scale and vertical rythm
+	padding-bottom: $global-padding*3;
 
-.hero-logo a {
 	@include breakpoint(medium) {
 		max-width: 20%;
-		margin-top: $global-margin;
-		margin-bottom: $global-margin*2;
 	}
 }
 
@@ -717,17 +721,50 @@ img .alignleft {
 
 
 
+.button.hollow {
+	font-weight: bold;
+}
 
 
 
 
 
 
+#header-contact-background {
+	background: $light-gray;
+	margin-bottom: $global-margin*2;
+	padding: $global-padding*2 $global-padding 0 $global-padding; // no bottom due to the contact boxes changing alignment is easier to have the bottom margin there
+}
 
+.header-contact {
+	max-width: 89.9em;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 
+	h3 {
+		margin-bottom: $global-margin*2;
+	}
 
+	@include breakpoint(large) {
+		flex-direction: row;
 
+		h3 { // once its in the row its a little different on the layout
+			margin-bottom: 0;
+			padding-right: $global-padding; // this is possibly causing the columns to be different sizes
+		}
+	}
+}
 
+.together {
+	display: inline-block;
+	width: 100%;
+}
+
+#header-contact--phone,
+#header-contact--place {
+	margin-bottom: $global-margin*2;
+}
 
 
 

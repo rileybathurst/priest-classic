@@ -205,7 +205,7 @@
 									<div class="gp-4 no-margin-bottom">
 										<?php the_excerpt(); ?>
 									</div>
-									<a href="<?php the_permalink(); ?>" class="gm-4 button hollow">More about <?php echo $short_title; ?></a>
+									<a href="<?php the_permalink(); ?>" class="gm-3 button hollow">More about <?php echo $short_title; ?></a>
 								</div>
 							</div>
 						</div>
